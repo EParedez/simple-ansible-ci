@@ -8,11 +8,14 @@ jobs:
     name: RunPlaybook
     runs-on: ubuntu-latest
     steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
       - name: Run playbook
         uses: dawidd6/action-ansible-playbook@v2
         with:
           # Required, playbook filepath
-          playbook: ${{ github.workspace }}/ansible/playbook.yml
+          playbook: ../ansible/playbook.yml
           # Optional, directory where playbooks live
           # directory: ./ansible
           # Optional, SSH private key
