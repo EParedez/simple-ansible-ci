@@ -5,6 +5,8 @@
   hosts: "demo"
   become: true
 
+  # vars:
+  #  ansible_user:
 
   tasks:
 

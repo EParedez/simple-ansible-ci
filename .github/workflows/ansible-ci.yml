@@ -23,7 +23,7 @@ jobs:
           # Optional, literal inventory file contents
           inventory: |
             [demo]
-            ${{secrets.SSH_HOST}}
+            ${{secrets.SSH_HOST}} ansible_user=ubuntu
 
           # Optional, SSH known hosts file content
           #known_hosts: |
